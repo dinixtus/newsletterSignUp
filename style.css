@@ -66,21 +66,25 @@ html body {
     position: relative;
     top: 4px;
 }
+.newsletter-main form {
+    width: 397px;
+} 
 
-.newsletter-main label {
-    display: block;
+.newsletter-main .mainLabel {
+    display: inline-block;
     margin-top: 20px;
     color: hsl(235, 18%, 26%);
     font-weight: 700;
 }
 
-.newsletter-main input {
+.newsletter-main .emailInput {
     margin-top: 10px;
     width: 397px;
     height: 60px;
     border-radius: 10px;
     border: 1px solid hsl(231, 7%, 60%);
     padding-left: 20px;
+    cursor: pointer;
 }
 
 .newsletter-main button {
@@ -92,4 +96,116 @@ html body {
     background-color: hsl(234, 29%, 20%);
     color: hsl(0, 0%, 100%);
     font-weight: 500;
+}
+
+.newsletter-main button:hover {
+    background: linear-gradient(to right, rgb(227, 73, 98), hsl(4, 100%, 67%));
+    border: 1px solid hsl(4, 100%, 67%);
+    box-shadow: 0 0 15px 5px hsla(4, 100%, 67%, 0.471);
+}
+
+.errorEmpty, .errorIncorect {
+    display: none;
+    color: hsl(4, 100%, 67%);
+    text-align: right;
+}
+
+.errorForm {
+    background-color:hsla(4, 100%, 67%, 0.537);
+    border: 1px solid hsl(4, 100%, 67%);
+    margin-top: 10px;
+    width: 397px;
+    height: 60px;
+    border-radius: 10px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.label-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.success {
+    display: none;
+    flex-direction: column;
+    background-color:hsl(0, 0%, 100%);
+    width: 400px;
+    height: 500px;
+    border-radius: 20px;;
+    align-items: start;
+    padding: 40px;
+}
+
+.success svg {
+    background: linear-gradient(to right, rgb(227, 73, 98), hsl(4, 100%, 67%));
+    border-radius: 100px;
+}
+
+.success h2 {
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 52px;
+}
+
+.success button {
+    margin-top: 20px;
+    width: 310px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid hsl(234, 29%, 20%);
+    background-color: hsl(234, 29%, 20%);
+    color: hsl(0, 0%, 100%);
+    font-weight: 500;
+}
+
+.success button:hover {
+    background: linear-gradient(to right, rgb(227, 73, 98), hsl(4, 100%, 67%));
+    border: 1px solid hsl(4, 100%, 67%);
+    box-shadow: 0 0 15px 5px hsla(4, 100%, 67%, 0.471);
+}
+
+
+@media (max-width: 900px) {
+    .big-img {
+        height: 400px;
+    }
+    .newsletter {
+        flex-direction: column-reverse;
+        margin-top: 200px;
+    }
+    .newsletter h2 {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        max-width: 500px;
+    }
+    .newsletter {
+        width: 350px;
+        margin-top: 100px;
+        justify-content: center;
+        padding: 10px;
+        padding-left: 35px;
+    }
+    .newsletter-main .emailInput {
+        width: 260px;
+    }
+    .newsletter-main button{
+        width: 260px;
+    }
+    .big-img {
+        display: none;
+    }
+    .success {
+        width: 350px;
+        padding: 10px;
+    }
+
+    .newsletter-main form {
+        width: 100%;
+    }
 }
